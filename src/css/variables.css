@@ -1,0 +1,13 @@
+:root {
+  /* COLORS */
+  --main-bg-color: #edeff0;
+  --dark-gray-1: #212121;
+  --dark-gray-2: #313131;
+  --gray: #5b5b5b;
+  --google-gray: #dbdde0;
+  --light-gray-1: #757575;
+  --light-gray-2: #e0e0e0;
+
+  /* FONTS */
+  --main-font-size: 81.25%;
+}
