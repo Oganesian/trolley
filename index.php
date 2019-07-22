@@ -14,7 +14,18 @@
 <body>
 
   <section id="main">
-
+    <div class="main-row">
+      <form name="time">
+        <select>
+          <option>name 1</option>
+          <option>name 2</option>
+          <option>...</option>
+        </select>
+        <input type="text" name="shifts" id="shifts_id" required/>
+        <input type="number" name="number_of_shifts" id="number_of_shifts_id" required/>
+        <input type="submit" />
+      </form>
+    </div>
   </section>
 
 </body>
