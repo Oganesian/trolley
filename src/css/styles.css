@@ -39,16 +39,25 @@ table {
 }
 
 td, th {
-  padding: 3px 11px;
+  padding: 3px 9px;
   border-bottom: 1px solid var(--main-bg-color);
 }
 
 .no-cell {
   background: rgba(255, 204, 202, 1);
+  content: url(../img/x.svg);
 }
 
 .yes-cell {
   background: rgba(209, 243, 209, 1);
+  content: url(../img/check.svg);
+}
+
+.yes-cell, .no-cell {
+  width: 25px;
+  height: 25px;
+  float: left;
+  color: #6A9F19;
 }
 
 .form-item {

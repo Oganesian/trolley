@@ -16,10 +16,8 @@ $(document).ready(function() {
     for(var i = 0; i < arr.length; i++){
       var cell = row.insertCell();
       if(arr[i] == "0"){
-        $(cell).html("Нет");
         $(cell).addClass("no-cell");
       }else{
-        $(cell).html("Да");
         $(cell).addClass("yes-cell");
       }
     }

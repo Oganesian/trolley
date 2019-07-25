@@ -33,7 +33,7 @@
           <table id="myTable">
             <tr>
               <th>Имя</th>
-              <th>Смены</th>
+              <th colspan="30">Смены</th>
             </tr>
           </table>
         </div>
