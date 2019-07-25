@@ -26,6 +26,26 @@ body {
   position: relative;
 }
 
+
+table {
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+  background: white;
+}
+
+td, th {
+  padding: 10px;
+  border-bottom: 1px solid var(--main-bg-color);
+}
+
+.no-cell {
+  background: rgba(255, 204, 202, 1);
+}
+
+.yes-cell {
+  background: rgba(209, 243, 209, 1);
+}
 /* MEDIA QUERIES */
 
 @media (max-width: 520px) {

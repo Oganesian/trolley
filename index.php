@@ -29,7 +29,10 @@
 
       <div>
         <table id="myTable">
-
+          <tr>
+            <th>Имя</th>
+            <th>Смены</th>
+          </tr>
         </table>
       </div>
     </div>

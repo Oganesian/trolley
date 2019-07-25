@@ -13,7 +13,13 @@ $(document).ready(function() {
     var row = table.insertRow();
     for(var i = 0; i < arr.length; i++){
       var cell = row.insertCell();
-      cell.innerHTML = arr[i];
+      if(arr[i] == "0"){
+        $(cell).html("Нет");
+        $(cell).addClass("no-cell");
+      }else{
+        $(cell).html("Да");
+        $(cell).addClass("yes-cell");
+      }
     }
     var cellWithName = row.insertCell(0);
     cellWithName.innerHTML = $("#names").val();
