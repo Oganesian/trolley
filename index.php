@@ -25,7 +25,7 @@
           </select>
           <input type="text" class="form-item" name="shifts" id="shifts_id" required/>
           <input type="number" class="form-item" name="number_of_shifts" id="number_of_shifts_id" required/>
-          <input type="submit" class="submit" />
+          <input type="submit" class="submit" value="Добавить"/>
         </form>
       </div>
       <div>

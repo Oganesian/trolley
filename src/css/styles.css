@@ -1,6 +1,6 @@
 @import 'variables.css';
 body {
-  font-size: var(--main-font-size);
+/*  font-size: var(--main-font-size);*/
   background: var(--main-bg-color);
   font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
 }
@@ -14,8 +14,8 @@ body {
 }
 
 .main-row {
-  width: 70%;
-  max-width: 1020px;
+  width: 80%;
+  max-width: 1092px;
   min-width: 480px;
   height: 100%;
   margin: auto;
@@ -26,6 +26,9 @@ body {
   position: relative;
 }
 
+td:nth-child(1) {
+  font-weight: bolder;
+}
 
 table {
   padding: 20px;
@@ -36,7 +39,7 @@ table {
 }
 
 td, th {
-  padding: 10px;
+  padding: 3px 11px;
   border-bottom: 1px solid var(--main-bg-color);
 }
 
