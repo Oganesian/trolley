@@ -8,6 +8,14 @@ $(document).ready(function() {
     str = str.replace(/\t/g, "0");
     var arr = str.split("");
     if(arr.length < $("#number_of_shifts_id").val()) arr.push("0");
-    alert(arr);
+
+    var table = document.getElementById("myTable");
+    var row = table.insertRow();
+    for(var i = 0; i < arr.length; i++){
+      var cell = row.insertCell();
+      cell.innerHTML = arr[i];
+    }
+    var cellWithName = row.insertCell(0);
+    cellWithName.innerHTML = $("#names").val();
   });
 });
