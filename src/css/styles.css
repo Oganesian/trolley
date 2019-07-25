@@ -32,6 +32,7 @@ table {
   margin: auto;
   text-align: center;
   background: white;
+  border-spacing: 0px;
 }
 
 td, th {
@@ -45,6 +46,43 @@ td, th {
 
 .yes-cell {
   background: rgba(209, 243, 209, 1);
+}
+
+.form-item {
+  border: none;
+  border-bottom: 1px solid rgb(224, 224, 224);
+  outline: none;
+  padding: 8px;
+  color: #000;
+  font-size: 16px;
+  font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+}
+
+.submit {
+  padding: 7.5px 16px 7.5px 16px;
+  line-height: normal;
+  height: auto;
+  border: 1px solid rgb(218, 220, 224);
+  color: #fff;
+  background: #1a73e8;
+  font-size: 15px;
+}
+
+.submit:hover {
+  cursor: pointer;
+}
+
+.form-container {
+  margin: auto;
+}
+
+.table-container {
+  margin-top: 5px;
+}
+
+select {
+  padding-top: 6px!important;
+  padding-bottom: 7px!important;
 }
 /* MEDIA QUERIES */
 

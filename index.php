@@ -15,25 +15,28 @@
 
   <section id="main">
     <div class="main-row">
-      <form name="time">
-        <select id="names">
-          <option>name 1</option>
-          <option>name 2</option>
-          <option>name 3</option>
-          <option>name 4</option>
-        </select>
-        <input type="text" name="shifts" id="shifts_id" required/>
-        <input type="number" name="number_of_shifts" id="number_of_shifts_id" required/>
-        <input type="submit" />
-      </form>
-
+      <div class="form-container">
+        <form name="time">
+          <select class="form-item" id="names">
+            <option>name 1</option>
+            <option>name 2</option>
+            <option>name 3</option>
+            <option>name 4</option>
+          </select>
+          <input type="text" class="form-item" name="shifts" id="shifts_id" required/>
+          <input type="number" class="form-item" name="number_of_shifts" id="number_of_shifts_id" required/>
+          <input type="submit" class="submit" />
+        </form>
+      </div>
       <div>
-        <table id="myTable">
-          <tr>
-            <th>Имя</th>
-            <th>Смены</th>
-          </tr>
-        </table>
+        <div class="table-container">
+          <table id="myTable">
+            <tr>
+              <th>Имя</th>
+              <th>Смены</th>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
   </section>
