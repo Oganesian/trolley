@@ -30,17 +30,20 @@ td:nth-child(1) {
   font-weight: bolder;
 }
 
+td {
+  border-left: 1px solid white;
+}
+
 table {
   padding: 20px;
   margin: auto;
   text-align: center;
   background: white;
-  border-spacing: 0px;
+  border-spacing: 1px;
 }
 
 td, th {
-  padding: 3px 9px;
-  border-bottom: 1px solid var(--main-bg-color);
+  padding: 3px 8px;
 }
 
 .no-cell {

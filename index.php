@@ -25,15 +25,15 @@
           </select>
           <input type="text" class="form-item" name="shifts" id="shifts_id" required/>
           <input type="number" class="form-item" name="number_of_shifts" id="number_of_shifts_id" required/>
-          <input type="submit" class="submit" value="Добавить"/>
+          <input type="submit" class="submit" value="Add"/>
         </form>
       </div>
       <div>
         <div class="table-container">
           <table id="myTable">
             <tr>
-              <th>Имя</th>
-              <th colspan="30">Смены</th>
+              <th>Name</th>
+              <th colspan="30">Shifts</th>
             </tr>
           </table>
         </div>
