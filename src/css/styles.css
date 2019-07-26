@@ -102,6 +102,11 @@ button:disabled {
   opacity: .5;
 }
 
+.bigger-cell {
+  width: 35px;
+  background: greenyellow;
+}
+
 #temp-shifts {
   margin-top: 20px;
 }

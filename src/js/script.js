@@ -56,6 +56,10 @@ $(document).ready(function() {
 });
 
 function nextShift(){
+  $("#myTable").find('td').removeClass("bigger-cell");
+  $("#myTable").find('td:nth-child('+(current_iterations+2)+')').each (function() {
+    $(this).toggleClass("bigger-cell");
+  });
   $("#next-shift").attr("disabled", "true");
   $("#temp-shifts tbody").empty();
   if(chosen_participants.length === 2) {

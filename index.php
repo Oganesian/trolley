@@ -31,10 +31,10 @@
       <div>
         <div class="table-container">
           <table id="myTable">
-            <tr>
-              <th>Name</th>
-              <th colspan="30">Shifts</th>
-            </tr>
+              <tr>
+                <th>Name</th>
+                <th>Shifts</th>
+              </tr>
           </table>
         </div>
         <div class="container-center">
