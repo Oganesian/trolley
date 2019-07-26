@@ -7,6 +7,7 @@ class Participant {
 }
 
 var participants = new Array();
+var current_iterations = 0;
 
 $(document).ready(function() {
   $('form[name="time"]').submit(function(e){
@@ -31,5 +32,29 @@ $(document).ready(function() {
     }
     var cellWithName = row.insertCell(0);
     cellWithName.innerHTML = $("#names").val();
+  });
+
+  $('#start-button').click(function(){
+    $('#temp-shifts').css("display", "table");
+    $('#start-button').attr("disabled", true);
+    var temp_participants = {};
+    for(var i = 0; i < participants.length; i++){
+      if(participants[i].shifts[current_iterations] == 1){
+        temp_participants[participants[i].name] = participants[i].number_of_shifts;
+      }
+    }
+    var table = document.getElementById("temp-shifts");
+    for (var key in temp_participants) {
+      var row = table.insertRow();
+      var nameCell = row.insertCell();
+      var n_o_sCell = row.insertCell();
+      $(nameCell).html(key);
+      $(n_o_sCell).html(temp_participants[key]);
+    }
+  });
+
+  $("#next-shift").click(function(){
+
+    current_iterations++;
   });
 });

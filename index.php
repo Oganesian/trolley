@@ -37,6 +37,17 @@
             </tr>
           </table>
         </div>
+        <div class="container-center">
+          <button class="submit" id="start-button">Start</button>
+        </div>
+      </div>
+      <div class="container-center">
+        <table id="temp-shifts">
+          <tr>
+            <th>Name</th>
+            <th>Number of Shifts</th>
+          </tr>
+        </table>
       </div>
     </div>
   </section>
