@@ -35,26 +35,35 @@ $(document).ready(function() {
   });
 
   $('#start-button').click(function(){
-    $('#temp-shifts').css("display", "table");
+    $('#temp-container').css("display", "block");
     $('#start-button').attr("disabled", true);
-    var temp_participants = {};
-    for(var i = 0; i < participants.length; i++){
-      if(participants[i].shifts[current_iterations] == 1){
-        temp_participants[participants[i].name] = participants[i].number_of_shifts;
-      }
-    }
-    var table = document.getElementById("temp-shifts");
-    for (var key in temp_participants) {
-      var row = table.insertRow();
-      var nameCell = row.insertCell();
-      var n_o_sCell = row.insertCell();
-      $(nameCell).html(key);
-      $(n_o_sCell).html(temp_participants[key]);
-    }
+    nextShift();
+  });
+
+  $("#temp-shifts").on("click", "td:nth-child(1)", function() {
+    alert($( this ).text());
   });
 
   $("#next-shift").click(function(){
-
-    current_iterations++;
+    nextShift();
   });
 });
+
+function nextShift(){
+  $("#temp-shifts tbody").empty();
+  var temp_participants = {};
+  for(var i = 0; i < participants.length; i++){
+    if(participants[i].shifts[current_iterations] == 1){
+      temp_participants[participants[i].name] = participants[i].number_of_shifts;
+    }
+  }
+  var tbody = document.getElementById('temp-shifts').getElementsByTagName('tbody')[0];
+  for (var key in temp_participants) {
+    var row = tbody.insertRow();
+    var nameCell = row.insertCell();
+    var n_o_sCell = row.insertCell();
+    $(nameCell).html(key);
+    $(n_o_sCell).html(temp_participants[key]);
+  }
+  current_iterations++;
+}

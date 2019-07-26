@@ -41,13 +41,19 @@
           <button class="submit" id="start-button">Start</button>
         </div>
       </div>
-      <div class="container-center">
+      <div class="container-center" id="temp-container">
         <table id="temp-shifts">
-          <tr>
-            <th>Name</th>
-            <th>Number of Shifts</th>
-          </tr>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Number of Shifts</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
         </table>
+        <button class="submit" id="next-shift">Next shift</button>
       </div>
     </div>
   </section>

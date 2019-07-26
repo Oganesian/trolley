@@ -26,7 +26,7 @@ body {
   position: relative;
 }
 
-td:nth-child(1) {
+#myTable td:nth-child(1) {
   font-weight: bolder;
 }
 
@@ -104,14 +104,21 @@ td, th {
 
 #temp-shifts {
   margin-top: 20px;
+}
+
+#temp-container {
   display: none;
+}
+
+#temp-shifts td:nth-child(1):hover{
+  cursor: pointer;
 }
 
 .form-container {
   margin: auto;
 }
 
-.table-container {
+.table-container, #next-shift {
   margin-top: 5px;
 }
 
