@@ -6,7 +6,8 @@ class Participant {
   }
 }
 
-var participants = new Array();
+var participants = {};
+var chosen_participants = new Array();
 var current_iterations = 0;
 
 $(document).ready(function() {
@@ -21,7 +22,7 @@ $(document).ready(function() {
     if(arr.length < $("#number_of_shifts_id").val()) arr.push("0");
     var table = document.getElementById("myTable");
     var row = table.insertRow();
-    participants.push(new Participant($("#names").val(), arr, 0));
+    participants[$("#names").val()] = new Participant($("#names").val(), arr, 0);
     for(var i = 0; i < arr.length; i++){
       var cell = row.insertCell();
       if(arr[i] == "0"){
@@ -41,8 +42,11 @@ $(document).ready(function() {
   });
 
   $("#temp-shifts").on("click", "td:nth-child(1)", function() {
-    $(this).toggleClass("chosen");
-    if($('.chosen').length == 2) $("#next-shift").removeAttr("disabled");
+    if($(this).toggleClass("chosen").hasClass("chosen"))
+      chosen_participants.push($(this).text());
+    else
+      chosen_participants.splice(chosen_participants.indexOf($(this).text()), 1);
+    if(chosen_participants.length == 2) $("#next-shift").removeAttr("disabled");
     else $("#next-shift").attr("disabled", "true");
   });
 
@@ -54,10 +58,16 @@ $(document).ready(function() {
 function nextShift(){
   $("#next-shift").attr("disabled", "true");
   $("#temp-shifts tbody").empty();
+  if(chosen_participants.length === 2) {
+    for(i = 0; i < 2; i++){
+      participants[chosen_participants[i]].number_of_shifts++;
+    }
+  }
+  chosen_participants = new Array();
   var temp_participants = {};
-  for(var i = 0; i < participants.length; i++){
-    if(participants[i].shifts[current_iterations] == 1){
-      temp_participants[participants[i].name] = participants[i].number_of_shifts;
+  for(var key in participants){
+    if(participants[key].shifts[current_iterations] == 1){
+      temp_participants[participants[key].name] = participants[key].number_of_shifts;
     }
   }
   var tbody = document.getElementById('temp-shifts').getElementsByTagName('tbody')[0];
