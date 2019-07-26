@@ -41,7 +41,9 @@ $(document).ready(function() {
   });
 
   $("#temp-shifts").on("click", "td:nth-child(1)", function() {
-    alert($( this ).text());
+    $(this).toggleClass("chosen");
+    if($('.chosen').length == 2) $("#next-shift").removeAttr("disabled");
+    else $("#next-shift").attr("disabled", "true");
   });
 
   $("#next-shift").click(function(){
@@ -50,6 +52,7 @@ $(document).ready(function() {
 });
 
 function nextShift(){
+  $("#next-shift").attr("disabled", "true");
   $("#temp-shifts tbody").empty();
   var temp_participants = {};
   for(var i = 0; i < participants.length; i++){

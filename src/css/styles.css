@@ -98,7 +98,7 @@ td, th {
   padding: 6px 30px;
 }
 
-#start-button:disabled {
+button:disabled {
   opacity: .5;
 }
 
@@ -120,6 +120,11 @@ td, th {
 
 .table-container, #next-shift {
   margin-top: 5px;
+}
+
+.chosen {
+  color: #6A9F19;
+  background: rgba(209, 243, 209, 1);
 }
 
 select {

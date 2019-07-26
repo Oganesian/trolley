@@ -50,10 +50,10 @@
             </tr>
           </thead>
           <tbody>
-            
+
           </tbody>
         </table>
-        <button class="submit" id="next-shift">Next shift</button>
+        <button class="submit" disabled="true" id="next-shift">Next shift</button>
       </div>
     </div>
   </section>
