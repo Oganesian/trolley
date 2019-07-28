@@ -34,6 +34,8 @@ $(document).ready(function() {
     }
     var cellWithName = row.insertCell(0);
     cellWithName.innerHTML = $("#names").val();
+    $("#shifts_id").val(null);
+    $("#names option:selected").remove();
   });
 
   $('#start-button').click(function(){
