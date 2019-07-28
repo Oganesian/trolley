@@ -138,6 +138,11 @@ button:disabled {
   margin: auto;
 }
 
+.table-container {
+  min-width: 1108px;
+  margin: auto;
+}
+
 .table-container, #next-shift {
   margin-top: 5px;
 }
