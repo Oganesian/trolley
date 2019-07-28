@@ -107,12 +107,12 @@ button:disabled {
   background: greenyellow;
 }
 
-#temp-shifts {
+#temp-shifts, #result-shifts {
   margin-top: 20px;
   min-width: 330px;
 }
 
-#temp-container {
+#temp-container, #result-container {
   display: none;
 }
 

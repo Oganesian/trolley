@@ -70,6 +70,12 @@ function nextShift(){
     }
     shifts.push(chosen_participants);
   }
+  if(current_iterations == ($("#number_of_shifts_id").val() - 1)){
+    $("#next-shift").text("Finish");
+  }
+  else if(current_iterations == $("#number_of_shifts_id").val()){
+    createResultTable();
+  }
   chosen_participants = new Array();
   var temp_participants = {};
   for(var key in participants){
@@ -86,4 +92,16 @@ function nextShift(){
     $(n_o_sCell).html(temp_participants[key]);
   }
   current_iterations++;
+}
+
+function createResultTable(){
+  $('#result-container').css("display", "block");
+  var table = document.getElementById("result-shifts");
+  for(var i = 0; i < shifts.length; i++){
+    var row = table.insertRow();
+    var cell_1 = row.insertCell();
+    var cell_2 = row.insertCell();
+    $(cell_1).text(shifts[i][0]);
+    $(cell_2).text(shifts[i][1]);
+  }
 }
