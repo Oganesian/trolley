@@ -15,8 +15,7 @@ body {
 
 .main-row {
   width: 80%;
-  max-width: 1092px;
-  min-width: 480px;
+  min-width: 1108px;
   height: 100%;
   margin: auto;
   padding-top: 20px;
@@ -42,7 +41,8 @@ table {
   border-spacing: 1px;
 }
 
-td, th {
+td,
+th {
   padding: 3px 8px;
 }
 
@@ -56,7 +56,8 @@ td, th {
   content: url(../img/check.svg);
 }
 
-.yes-cell, .no-cell {
+.yes-cell,
+.no-cell {
   width: 25px;
   height: 25px;
   float: left;
@@ -107,17 +108,16 @@ button:disabled {
   background: greenyellow;
 }
 
-#temp-shifts, #result-shifts, #stats {
+#temp-shifts,
+#result-shifts,
+#stats {
   margin-top: 20px;
   min-width: 330px;
 }
 
-#temp-container, #result-container {
-  display: none;
-}
-
+#temp-container,
 #result-container {
-  margin: auto;
+  display: none;
 }
 
 #result-shifts {
@@ -134,16 +134,14 @@ button:disabled {
   cursor: pointer;
 }
 
-.form-container {
+.form-container,
+.table-container,
+#result-container {
   margin: auto;
 }
 
-.table-container {
-  min-width: 1108px;
-  margin: auto;
-}
-
-.table-container, #next-shift {
+.table-container,
+#next-shift {
   margin-top: 5px;
 }
 
