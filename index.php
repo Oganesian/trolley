@@ -49,11 +49,20 @@
               <th>Number of Shifts</th>
             </tr>
           </thead>
-          <tbody>
-
-          </tbody>
+          <tbody></tbody>
         </table>
         <button class="submit" disabled="true" id="next-shift">Next shift</button>
+      </div>
+      <div class="container-center" id="result-container">
+        <table id="result-shifts">
+          <thead>
+            <tr>
+              <th>Name-1</th>
+              <th>Name-2</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
     </div>
   </section>
