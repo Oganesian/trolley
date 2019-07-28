@@ -107,13 +107,27 @@ button:disabled {
   background: greenyellow;
 }
 
-#temp-shifts, #result-shifts {
+#temp-shifts, #result-shifts, #stats {
   margin-top: 20px;
   min-width: 330px;
 }
 
 #temp-container, #result-container {
   display: none;
+}
+
+#result-container {
+  margin: auto;
+}
+
+#result-shifts {
+  float: left;
+  margin-right: 5px;
+}
+
+#stats {
+  margin-left: 5px;
+  float: right;
 }
 
 #temp-shifts td:nth-child(1):hover{

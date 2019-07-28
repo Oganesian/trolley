@@ -63,6 +63,15 @@
           </thead>
           <tbody></tbody>
         </table>
+        <table id="stats">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Shifts in this month</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
     </div>
   </section>

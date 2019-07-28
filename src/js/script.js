@@ -77,6 +77,8 @@ function nextShift(){
   }
   else if(current_iterations == $("#number_of_shifts_id").val()){
     createResultTable();
+    craeteStatisticsTable();
+    $('#temp-container').css("display", "none");
   }
   chosen_participants = new Array();
   var temp_participants = {};
@@ -105,5 +107,16 @@ function createResultTable(){
     var cell_2 = row.insertCell();
     $(cell_1).text(shifts[i][0]);
     $(cell_2).text(shifts[i][1]);
+  }
+}
+
+function craeteStatisticsTable() {
+  var table = document.getElementById("stats");
+  for(var key in participants){
+    var row = table.insertRow();
+    var cell_1 = row.insertCell();
+    var cell_2 = row.insertCell();
+    $(cell_1).text(key);
+    $(cell_2).text(participants[key].number_of_shifts);
   }
 }
