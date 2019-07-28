@@ -9,6 +9,7 @@ class Participant {
 var participants = {};
 var chosen_participants = new Array();
 var current_iterations = 0;
+var shifts = new Array();
 
 $(document).ready(function() {
   $('form[name="time"]').submit(function(e){
@@ -46,6 +47,7 @@ $(document).ready(function() {
       chosen_participants.push($(this).text());
     else
       chosen_participants.splice(chosen_participants.indexOf($(this).text()), 1);
+
     if(chosen_participants.length == 2) $("#next-shift").removeAttr("disabled");
     else $("#next-shift").attr("disabled", "true");
   });
@@ -66,6 +68,7 @@ function nextShift(){
     for(i = 0; i < 2; i++){
       participants[chosen_participants[i]].number_of_shifts++;
     }
+    shifts.push(chosen_participants);
   }
   chosen_participants = new Array();
   var temp_participants = {};

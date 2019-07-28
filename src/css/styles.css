@@ -109,6 +109,7 @@ button:disabled {
 
 #temp-shifts {
   margin-top: 20px;
+  min-width: 330px;
 }
 
 #temp-container {
